@@ -1,12 +1,11 @@
 My Dotfiles
 ================
 
-Configuration files for my $HOME using [Dotbot][dotbot] for bootstrapping.
+Configuration files for my $HOME using [Dotbot][dotbot] as installer.
 
 #### Installation
 ```bash
 git clone git@github.com:steven-maasch/dotfiles.git
-git submodule update --init --recursive
 ./install
 ```
 Launch `vim` and run `:PluginInstall`
