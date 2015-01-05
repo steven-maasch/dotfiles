@@ -5,8 +5,7 @@ Configuration files for my $HOME using [Dotbot][dotbot] as installer.
 
 #### Installation
 ```bash
-git clone git@github.com:steven-maasch/dotfiles.git
-./install
+git clone git@github.com:steven-maasch/dotfiles.git dotfiles && cd $_ && ./install
 ```
 Launch `vim` and run `:PluginInstall`
 
