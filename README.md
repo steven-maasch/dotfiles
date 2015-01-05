@@ -29,7 +29,7 @@ Launch `tmux` and hit `prefix + I`
  + [tmux-pain-control][tmux_pain_control]
 + gitconfig
 
-### Requirements
+#### Requirements
 + [tmux] >= 1.9
 
 [dotbot]: https://github.com/anishathalye/dotbot/
