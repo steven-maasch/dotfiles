@@ -1,0 +1,17 @@
+[user]
+	name = Steven Maasch
+	email = steven.maasch@gmx.de
+[core]
+	editor = vim
+[push]
+	default = current
+[alias]
+	a = add
+	aa = add -A
+	ai = add -i
+	br = branch
+	cm = commit
+	co = checkout
+	ph = push
+	pl = pull
+	st = status -sb
