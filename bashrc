@@ -60,3 +60,11 @@ fi
 mkcd() {
 	mkdir -p "$@" && cd "$_"
 }
+
+# CDABLE VARS
+# =====================================
+# no tilde expansion => use $HOME instead
+export dropbox="$HOME/Dropbox"
+export desktop="$HOME/Schreibtisch"
+export downloads="$HOME/Downloads"
+export projects="$HOME/projects"
