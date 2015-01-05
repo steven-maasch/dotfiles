@@ -11,7 +11,7 @@ Launch `vim` and run `:PluginInstall`
 
 Launch `tmux` and hit `prefix + I`
 
-### Included Configurations
+#### Included Configurations
 + bash_aliases
 + bash_profile
 + bashrc
