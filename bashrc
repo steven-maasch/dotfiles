@@ -26,7 +26,7 @@ fi
 
 # PS1
 # =====================================
-if which tput > /dev/null 2>&1 && [[ $(tput -T$TERM colors) -ge 8 ]]; then
+if which tput &> /dev/null && [[ $(tput -T$TERM colors) -ge 8 ]]; then
 	PS1="\[\e[00;33m\][\w]\[\e[0m\]\[\e[00;37m\]\$ \[\e[0m\]"
 else
 	PS1="[\w]\$ "
@@ -50,7 +50,7 @@ fi
 
 # TMUX
 # =====================================
-if which tmux > /dev/null 2>&1; then
+if which tmux &> /dev/null; then
 	# attach session if one exisits or create new one
 	test -z "$TMUX" && (tmux attach || tmux new-session) 
 fi
