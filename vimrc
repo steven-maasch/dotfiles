@@ -10,6 +10,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'gmarik/Vundle.vim'
+Plugin 'vim-perl/vim-perl'
 
 call vundle#end()
 
