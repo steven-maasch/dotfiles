@@ -23,6 +23,7 @@ alias upd="sudo apt-get update"
 alias upg="sudo apt-get upgrade"
 alias updg="upd && upg"
 alias install="sudo apt-get install -y"
+alias sudo="sudo "
 
 alias rm="rm -v"
 alias mkdir="mkdir -p"
