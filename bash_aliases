@@ -1,7 +1,7 @@
 alias mencfs="encfs ~/Dropbox/dog-one ~/decrypted"
 alias umencfs="fusermount -u ~/decrypted"
 
-alias myshred="shred -vu -n 1"
+alias wipe="wipe -q -Q 1 -R /dev/zero -S r -r"
 
 COLOR_AUTO="--color=auto"
 
