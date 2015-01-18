@@ -25,7 +25,7 @@ alias updg="upd && upg"
 alias install="sudo apt-get install -y"
 alias sudo="sudo "
 
-alias rm="rm -v"
+alias rm="rm -i"
 alias mkdir="mkdir -p"
 
 alias h="history"
