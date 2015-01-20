@@ -48,6 +48,8 @@ if [ -f ${BASE16_COMPLETE_PATH} ]; then
 	. ${BASE16_COMPLETE_PATH}
 fi
 
+unset BASE16_{THEME,BASE_DIR,COMPLETE_PATH}
+
 # TMUX
 # =====================================
 if which tmux &> /dev/null; then

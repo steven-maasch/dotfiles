@@ -17,7 +17,6 @@ alias tree="tree -C"
 alias grep="grep $COLOR_AUTO"
 alias fgrep="fgrep $COLOR_AUTO"
 alias egrep="egrep $COLOR_AUTO"
-alias pgrep="pgrep $COLOR_AUTO"
 
 alias upd="sudo apt-get update"
 alias upg="sudo apt-get upgrade"
