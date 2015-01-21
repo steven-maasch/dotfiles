@@ -18,18 +18,19 @@ alias grep="grep $COLOR_AUTO"
 alias fgrep="fgrep $COLOR_AUTO"
 alias egrep="egrep $COLOR_AUTO"
 
-alias upd="sudo apt-get update"
-alias upg="sudo apt-get upgrade"
-alias updg="upd && upg"
-alias install="sudo apt-get install -y"
-alias sudo="sudo "
+APT_GET="sudo apt-get"
+
+alias apt-get="$APT_GET"
+alias ag="$APT_GET"
+alias agi="$APT_GET install -y"
+alias update="$APT_GET update && $APT_GET upgrade"
 
 alias rm="rm -i"
 alias mkdir="mkdir -p"
-
+alias sudo="sudo "
 alias h="history"
 alias c="clear"
-
 alias top="htop"
 
 unset COLOR_AUTO
+unset APT_GET

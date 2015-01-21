@@ -41,11 +41,11 @@ fi
 # BASE16 SHELL
 # =====================================
 BASE16_THEME="base16-flat.dark.sh"
-BASE16_BASE_DIR="$HOME/.config/base16-shell"
-BASE16_COMPLETE_PATH=${BASE16_BASE_DIR}/${BASE16_THEME}
+BASE16_BASE_DIR="${HOME}/.config/base16-shell"
+BASE16_COMPLETE_PATH="${BASE16_BASE_DIR}/${BASE16_THEME}"
 
-if [ -f ${BASE16_COMPLETE_PATH} ]; then 
-	. ${BASE16_COMPLETE_PATH}
+if [ -f $BASE16_COMPLETE_PATH ]; then 
+	. $BASE16_COMPLETE_PATH
 fi
 
 unset BASE16_{THEME,BASE_DIR,COMPLETE_PATH}
@@ -66,7 +66,7 @@ mkcd() {
 # CDABLE VARS
 # =====================================
 # no tilde expansion => use $HOME instead
-export dropbox="$HOME/Dropbox"
-export desktop="$HOME/Schreibtisch"
-export downloads="$HOME/Downloads"
-export projects="$HOME/projects"
+export dropbox="${HOME}/Dropbox"
+export desktop="${HOME}/Schreibtisch"
+export downloads="${HOME}/Downloads"
+export projects="${HOME}/projects"
