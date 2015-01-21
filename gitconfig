@@ -12,6 +12,9 @@
 	br = branch
 	cm = commit
 	co = checkout
+	df = diff
+	dc = diff --cached
+	lg = log -p --oneline
 	ph = push
 	pl = pull
 	st = status -sb
