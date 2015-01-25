@@ -1,7 +1,7 @@
 alias mencfs="encfs ~/Dropbox/dog-one ~/decrypted"
 alias umencfs="fusermount -u ~/decrypted"
 
-alias wipe="wipe -q -Q 1 -R /dev/zero -S r -r -c"
+alias mywipe="wipe -q -Q 1 -R /dev/zero -S r -r -c"
 
 alias myip="curl icanhazip.com"
 
