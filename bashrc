@@ -59,8 +59,15 @@ fi
 
 # CUSTOM FUNCTIONS
 # =====================================
+
+# mkdir and change to it
 mkcd() {
-	mkdir -p "$@" && cd "$_"
+	mkdir -p "$1" && cd "$_"
+}
+
+# change to directory and list its contents
+cls() {
+	cd "$1" && ls -F
 }
 
 # CDABLE VARS

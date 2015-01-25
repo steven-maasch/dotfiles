@@ -3,6 +3,8 @@ alias umencfs="fusermount -u ~/decrypted"
 
 alias wipe="wipe -q -Q 1 -R /dev/zero -S r -r -c"
 
+alias myip="curl icanhazip.com"
+
 COLOR_AUTO="--color=auto"
 
 alias ls="ls $COLOR_AUTO"
