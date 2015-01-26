@@ -36,7 +36,5 @@ alias top="htop"
 
 alias rebash=". ~/.bash{rc,_aliases}"
 
-alias g="git"
-
 unset COLOR_AUTO
 unset APT_GET
