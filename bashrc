@@ -24,13 +24,19 @@ if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
 
-# PS1
+# PS1 and PS2
 # =====================================
-if which tput &> /dev/null && [[ $(tput -T$TERM colors) -ge 8 ]]; then
+COLORED_PROMPT=true
+
+if $COLORED_PROMPT && which tput &> /dev/null && [[ $(tput -T$TERM colors) -ge 8 ]]; then
 	PS1="\[\e[00;33m\][\w]\[\e[0m\]\[\e[00;37m\]\$ \[\e[0m\]"
 else
 	PS1="[\w]\$ "
 fi
+
+unset $COLORED_PROMPT
+
+PS2="> "
 
 # BASH COMPLETION
 # =====================================
@@ -61,8 +67,8 @@ fi
 # =====================================
 
 # mkdir and change to it
-mkcd() {
-	mkdir -p "$1" && cd "$_"
+mcd() {
+	mkdir -p "$1" && cd "$1"
 }
 
 # change to directory and list its contents
