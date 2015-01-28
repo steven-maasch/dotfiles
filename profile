@@ -4,9 +4,9 @@
 # =====================================
 export EDITOR=vim
 export PAGER=less
-
+export CDPATH=~/projects:~/dev:~/workspaces
 # PATH
 # =====================================
 if [ -d "$HOME/bin" ] ; then
-	PATH="$PATH:$HOME/bin"
+	export PATH="$PATH:$HOME/bin"
 fi
