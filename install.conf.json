@@ -20,7 +20,11 @@
             "create": true,
             "path": "vim/"
         },
-        "~/.vimrc": "vimrc"
+        "~/.vimrc": "vimrc",
+        "~/.config/Terminal": {
+            "create" : true,
+            "path" : "Terminal"
+        }
     },
     "shell": [
         ["git submodule update --init --recursive", "Installing submodules"]
