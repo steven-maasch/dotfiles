@@ -44,17 +44,17 @@ if [ -f /etc/bash_completion ]; then
 	. /etc/bash_completion
 fi
 
-# BASE16 SHELL
-# =====================================
-BASE16_THEME="base16-flat.dark.sh"
-BASE16_BASE_DIR="${HOME}/.config/base16-shell"
-BASE16_COMPLETE_PATH="${BASE16_BASE_DIR}/${BASE16_THEME}"
-
-if [ -f $BASE16_COMPLETE_PATH ]; then 
-	. $BASE16_COMPLETE_PATH
-fi
-
-unset BASE16_{THEME,BASE_DIR,COMPLETE_PATH}
+## BASE16 SHELL
+## =====================================
+#BASE16_THEME="base16-flat.dark.sh"
+#BASE16_BASE_DIR="${HOME}/.config/base16-shell"
+#BASE16_COMPLETE_PATH="${BASE16_BASE_DIR}/${BASE16_THEME}"
+#
+#if [ -f $BASE16_COMPLETE_PATH ]; then 
+#	. $BASE16_COMPLETE_PATH
+#fi
+#
+#unset BASE16_{THEME,BASE_DIR,COMPLETE_PATH}
 
 # TMUX
 # =====================================
