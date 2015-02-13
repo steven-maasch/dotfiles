@@ -4,7 +4,7 @@
 # =====================================
 export EDITOR=vim
 export PAGER=less
-export CDPATH=~/projects:~/dev:~/workspaces
+export CDPATH=~/projects
 
 # PATH
 # =====================================
