@@ -12,6 +12,7 @@ alias ll="ls -lhF"
 alias la="ls -FA"
 alias lla="ls -lhFA"
 alias lt="ls -lhFAtr"
+alias l.="ls -d .*"
 alias +="pushd"
 alias -- -="popd"
 
