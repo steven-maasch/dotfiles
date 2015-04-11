@@ -6,7 +6,7 @@ $include /etc/inputrc
 
 # SINGLE TAB
 # =====================================
-set show-all-if-ambiguous on
+#set show-all-if-ambiguous on
 
 # NO BELL
 # =====================================
