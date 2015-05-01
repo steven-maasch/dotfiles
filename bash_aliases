@@ -3,6 +3,9 @@ alias umencfs="fusermount -u ~/decrypted"
 alias mywipe="wipe -q -Q 1 -R /dev/zero -S r -r -c"
 alias myshred="shred -uvzn 0"
 
+alias sxc="xclip -selection c"
+alias gxc="xclip -selection clipboard -o"
+
 alias myip="curl icanhazip.com"
 
 COLOR_AUTO="--color=auto"
