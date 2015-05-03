@@ -21,7 +21,8 @@
             "path": "vim/"
         },
         "~/.vimrc": "vimrc",
-        "~/.zshrc": "zshrc"
+        "~/.zshrc": "zshrc",
+        "~/.oh-my-zsh/themes/timelords.zsh-theme": "zsh/timelords.zsh-theme"
     },
     "shell": [
         ["git submodule update --init --recursive", "Installing submodules"]
