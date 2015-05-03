@@ -1,7 +1,7 @@
 [{
     "clean": ["~", "~/.config"],
     "link": {
-        "~/.bash_aliases": "bash_aliases",
+        "~/.aliases": "aliases",
         "~/.bash_profile": "bash_profile",
         "~/.bashrc": "bashrc",
         "~/.config/base16-shell": {
@@ -20,7 +20,9 @@
             "create": true,
             "path": "vim/"
         },
-        "~/.vimrc": "vimrc"
+        "~/.vimrc": "vimrc",
+        "~/.zshrc": "zshrc",
+        "~/.oh-my-zsh/themes/timelords.zsh-theme": "zsh/timelords.zsh-theme"
     },
     "shell": [
         ["git submodule update --init --recursive", "Installing submodules"]
