@@ -15,6 +15,7 @@ alias lt="ls -lhFAtr"
 alias l.="ls -d .*"
 alias +="pushd"
 alias -- -="popd"
+alias ...="cd ../.."
 
 alias tree="tree -C"
 alias mydf="df -hPT | column -t"
