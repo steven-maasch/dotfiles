@@ -5,11 +5,15 @@
 export EDITOR=vim
 export PAGER=less
 
+export MAVEN_HOME="/opt/apache/maven/default"
+
 # PATH
 # =====================================
 if [ -d "$HOME/bin" ]; then
 	export PATH="$PATH:$HOME/bin"
 fi
+
+PATH="$PATH:$MAVEN_HOME/bin"
 
 # BASH
 # =====================================
