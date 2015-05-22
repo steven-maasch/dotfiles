@@ -13,7 +13,7 @@ if [ -d "$HOME/bin" ]; then
 	export PATH="$PATH:$HOME/bin"
 fi
 
-PATH="$PATH:$MAVEN_HOME/bin"
+export PATH="$PATH:$MAVEN_HOME/bin"
 
 # BASH
 # =====================================
