@@ -1,0 +1,63 @@
+# Minified .bashrc for geany, eclipse ... terminal
+
+# OPTIONS
+# =====================================
+shopt -s checkwinsize
+shopt -s autocd
+shopt -s histappend
+shopt -s extglob
+shopt -s no_empty_cmd_completion
+shopt -s cdable_vars
+
+# HISTORY
+# =====================================
+HISTSIZE=1000
+HISTFILESIZE=${HISTSIZE}
+HISTCONTROL=ignoreboth
+
+# ALIASES
+# =====================================
+if [ -f ~/.aliases ]; then
+	. ~/.aliases
+fi
+
+# PS1 and PS2
+# =====================================
+COLORED_PROMPT=true
+
+if $COLORED_PROMPT && which tput &> /dev/null && [[ $(tput -T$TERM colors) -ge 8 ]]; then
+	PS1="\[\e[00;33m\][\w]\[\e[0m\]\[\e[00;37m\]\$ \[\e[0m\]"
+else
+	PS1="[\w]\$ "
+fi
+
+unset $COLORED_PROMPT
+
+PS2="> "
+
+# BASH COMPLETION
+# =====================================
+if [ -f /etc/bash_completion ]; then
+	. /etc/bash_completion
+fi
+
+# CUSTOM FUNCTIONS
+# =====================================
+
+# mkdir and change to it
+mcd() {
+	mkdir -p "$1" && cd "$1"
+}
+
+# change to directory and list its contents
+cls() {
+	cd "$1" && ls -F
+}
+
+# CDABLE VARS
+# =====================================
+# no tilde expansion => use $HOME instead
+export dropbox="${HOME}/Dropbox"
+export desktop="${HOME}/Schreibtisch"
+export downloads="${HOME}/Downloads"
+export projects="${HOME}/projects"

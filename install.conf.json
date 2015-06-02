@@ -4,6 +4,7 @@
         "~/.aliases": "aliases",
         "~/.bash_profile": "bash_profile",
         "~/.bashrc": "bashrc",
+        "~/.bashrc-min": "bashrc-min",
         "~/.config/base16-shell": {
             "create": true,
             "path": "base16-shell/"
