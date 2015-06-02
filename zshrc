@@ -74,8 +74,6 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
 
 # ALIASES
 source $HOME/.aliases
@@ -90,3 +88,6 @@ export dropbox=$HOME/Dropbox
 export desktop=$HOME/Schreibtisch
 export downloads=$HOME/Downloads
 export projects=$HOME/projects
+
+# Source ~/.profile
+[[ -e ~/.profile ]] && emulate sh -c ". ~/.profile"
