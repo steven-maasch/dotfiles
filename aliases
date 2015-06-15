@@ -1,6 +1,6 @@
 alias mencfs="encfs ~/Dropbox/dog-one ~/decrypted"
 alias umencfs="fusermount -u ~/decrypted"
-alias mywipe="wipe -q -Q 1 -R /dev/zero -S r -r -c"
+alias mywipe="wipe -dr"
 alias myshred="shred -uvzn 0"
 
 alias sxc="xclip -selection clipboard"
@@ -31,6 +31,10 @@ alias agi="$APT_GET install -y"
 alias upd="$APT_GET update"
 alias upg="$APT_GET upgrade"
 alias updg="$APT_GET update && $APT_GET upgrade"
+
+ZYPPER="sudo zypper"
+alias zypper="$ZYPPER"
+alias zypi="$ZYPPER in"
 
 alias rm="rm -i"
 alias rd="rm -r"
