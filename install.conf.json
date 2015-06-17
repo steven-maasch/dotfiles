@@ -4,7 +4,6 @@
         "~/.aliases": "aliases",
         "~/.bash_profile": "bash_profile",
         "~/.bashrc": "bashrc",
-        "~/.bashrc-min": "bashrc-min",
         "~/.config/base16-shell": {
             "create": true,
             "path": "base16-shell/"
@@ -21,9 +20,7 @@
             "create": true,
             "path": "vim/"
         },
-        "~/.vimrc": "vimrc",
-        "~/.zshrc": "zshrc",
-        "~/.oh-my-zsh/themes/timelords.zsh-theme": "zsh/timelords.zsh-theme"
+        "~/.vimrc": "vimrc"
     },
     "shell": [
         ["git submodule update --init --recursive", "Installing submodules"]
