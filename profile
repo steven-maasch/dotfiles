@@ -5,7 +5,7 @@
 export EDITOR=vim
 export PAGER=less
 
-export MAVEN_HOME="/opt/apache/maven/default"
+export MAVEN_HOME="/opt/maven-default"
 
 # PATH
 # =====================================
