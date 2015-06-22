@@ -5,6 +5,9 @@
 export EDITOR=vim
 export PAGER=less
 
+# Automatically invoke cnf-handler
+export COMMAND_NOT_FOUND_AUTO=1
+
 export MAVEN_HOME="/opt/maven-default"
 
 # PATH
