@@ -1,5 +1,9 @@
 # ~/.bash_profile
 
 if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
+    . ~/.bashrc
+fi
+
+if [ -f ~/.profile ]; then
+    . ~/.profile
 fi
