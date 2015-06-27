@@ -9,6 +9,7 @@ export PAGER=less
 export COMMAND_NOT_FOUND_AUTO=1
 
 export MAVEN_HOME="/opt/maven-default"
+export JAVA_HOME="/opt/java7-default"
 
 # PATH
 # =====================================
