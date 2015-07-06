@@ -8,6 +8,9 @@ export PAGER=less
 # Automatically invoke cnf-handler
 export COMMAND_NOT_FOUND_AUTO=1
 
+# Don't ask which man section if name exists in diffrent section
+export MAN_POSIXLY_CORRECT=1
+
 # Maven
 # =====================================
 MAVEN_HOME="/opt/maven-default"
