@@ -22,6 +22,17 @@ else
     unset MAVEN_HOME;
 fi
 
+# Gradle
+# =====================================
+GRADLE_HOME="/opt/gradle-default"
+
+if [ -L $GRADLE_HOME ]; then
+    export GRADLE_HOME
+    export PATH="$PATH:$GRADLE_HOME/bin"
+else
+    unset GRADLE_HOME
+fi
+
 # Java
 # =====================================
 JAVA_HOME="/opt/java7-default"
