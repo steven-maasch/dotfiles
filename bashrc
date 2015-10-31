@@ -2,6 +2,8 @@
 
 [ -z "$PS1" ] && return
 
+PROMPT_DIRTRIM=3
+
 # OPTIONS
 # =====================================
 shopt -s checkwinsize
@@ -69,11 +71,6 @@ fi
 # mkdir and change to it
 mcd() {
 	mkdir -p "$1" && cd "$1"
-}
-
-# change to directory and list its contents
-cls() {
-	cd "$1" && ls -F
 }
 
 # CDABLE VARS
