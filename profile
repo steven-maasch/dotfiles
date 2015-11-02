@@ -35,7 +35,7 @@ fi
 
 # Java
 # =====================================
-JAVA_HOME="/opt/java7-default"
+JAVA_HOME="/opt/java8-default"
 
 if [ -L $JAVA_HOME ]; then
     export JAVA_HOME
