@@ -69,7 +69,7 @@ fi
 # =====================================
 
 # mkdir and change to it
-mcd() {
+mkcd() {
 	mkdir -p "$1" && cd "$1"
 }
 
