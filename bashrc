@@ -2,7 +2,7 @@
 
 [ -z "$PS1" ] && return
 
-PROMPT_DIRTRIM=3
+PROMPT_DIRTRIM=2
 
 # OPTIONS
 # =====================================
@@ -15,9 +15,9 @@ shopt -s cdable_vars
 
 # HISTORY
 # =====================================
-HISTSIZE=1000
+HISTSIZE=10000
 HISTFILESIZE=${HISTSIZE}
-HISTCONTROL=ignoreboth
+HISTCONTROL="erasedups:ignoreboth"
 HISTIGNORE="ls*:l:ll:la:lla:l.:cd*:upd:upg:updg:h:c:exit:."
 
 # ALIASES
@@ -60,10 +60,14 @@ unset BASE16_{THEME,BASE_DIR,COMPLETE_PATH}
 
 # TMUX
 # =====================================
-if which tmux &> /dev/null; then
+TMUX_SESSION=false
+
+if which tmux &> /dev/null && $TMUX_SESSION; then
 	# attach session if one exisits or create new one
 	test -z "$TMUX" && (tmux attach || tmux new-session) 
 fi
+
+unset $TMUX_SESSION
 
 # CUSTOM FUNCTIONS
 # =====================================

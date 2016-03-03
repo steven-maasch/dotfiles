@@ -2,6 +2,8 @@
 
 [ -z "$PS1" ] && return
 
+PROMPT_DIRTRIM=2
+
 # OPTIONS
 # =====================================
 shopt -s checkwinsize
@@ -13,9 +15,9 @@ shopt -s cdable_vars
 
 # HISTORY
 # =====================================
-HISTSIZE=1000
+HISTSIZE=10000
 HISTFILESIZE=${HISTSIZE}
-HISTCONTROL=ignoreboth
+HISTCONTROL="erasedups:ignoreboth"
 
 # ALIASES
 # =====================================
@@ -47,13 +49,8 @@ fi
 # =====================================
 
 # mkdir and change to it
-mcd() {
+mkcd() {
 	mkdir -p "$1" && cd "$1"
-}
-
-# change to directory and list its contents
-cls() {
-	cd "$1" && ls -F
 }
 
 # CDABLE VARS
