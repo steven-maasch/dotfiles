@@ -44,7 +44,6 @@ alias h="history"
 alias c="clear"
 alias top="htop"
 
-alias rebash=". ~/.bash{rc,_aliases}"
-
-unset COLOR_AUTO
-unset APT_GET
+unset -v COLOR_AUTO
+unset -v APT_GET
+unset -v ZYPPER
