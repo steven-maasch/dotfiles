@@ -11,17 +11,6 @@ export COMMAND_NOT_FOUND_AUTO=1
 # Don't ask which man section if name exists in diffrent section
 export MAN_POSIXLY_CORRECT=1
 
-# Maven
-# =====================================
-MAVEN_HOME="/opt/maven-default"
-
-if [ -L $MAVEN_HOME ]; then
-    export MAVEN_HOME
-    export PATH="$PATH:$MAVEN_HOME/bin"
-else
-    unset MAVEN_HOME;
-fi
-
 # Gradle
 # =====================================
 GRADLE_HOME="/opt/gradle-default"

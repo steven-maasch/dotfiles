@@ -3,6 +3,7 @@
 [ -z "$PS1" ] && return
 
 PROMPT_DIRTRIM=2
+PROMPT_COMMAND='history -a'
 
 # OPTIONS
 # =====================================
@@ -12,11 +13,12 @@ shopt -s histappend
 shopt -s extglob
 shopt -s no_empty_cmd_completion
 shopt -s cdable_vars
+shopt -s cdspell
 
 # HISTORY
 # =====================================
 HISTSIZE=10000
-HISTFILESIZE=${HISTSIZE}
+HISTFILESIZE=$(($HISTSIZE * 2))
 HISTCONTROL="erasedups:ignoreboth"
 HISTIGNORE="ls*:l:ll:la:lla:l.:cd*:upd:upg:updg:h:c:exit:."
 
@@ -36,7 +38,7 @@ else
 	PS1="[\w]\$ "
 fi
 
-unset $COLORED_PROMPT
+unset -v COLORED_PROMPT
 
 PS2="> "
 
@@ -56,7 +58,7 @@ if [ -f $BASE16_COMPLETE_PATH ]; then
 	. $BASE16_COMPLETE_PATH
 fi
 
-unset BASE16_{THEME,BASE_DIR,COMPLETE_PATH}
+unset -v BASE16_{THEME,BASE_DIR,COMPLETE_PATH}
 
 # TMUX
 # =====================================
@@ -67,14 +69,21 @@ if which tmux &> /dev/null && $TMUX_SESSION; then
 	test -z "$TMUX" && (tmux attach || tmux new-session) 
 fi
 
-unset $TMUX_SESSION
+unset -v TMUX_SESSION
 
 # CUSTOM FUNCTIONS
 # =====================================
 
 # mkdir and change to it
-mkcd() {
+mkcd ()
+{
 	mkdir -p "$1" && cd "$1"
+}
+
+# start meld in background
+meld ()
+{
+    command meld "$@" &
 }
 
 # CDABLE VARS

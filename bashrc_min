@@ -12,11 +12,12 @@ shopt -s histappend
 shopt -s extglob
 shopt -s no_empty_cmd_completion
 shopt -s cdable_vars
+shopt -s cdspell
 
 # HISTORY
 # =====================================
 HISTSIZE=10000
-HISTFILESIZE=${HISTSIZE}
+HISTFILESIZE=$(($HISTSIZE * 2))
 HISTCONTROL="erasedups:ignoreboth"
 
 # ALIASES
@@ -35,7 +36,7 @@ else
 	PS1="[\w]\$ "
 fi
 
-unset $COLORED_PROMPT
+unset -v COLORED_PROMPT
 
 PS2="> "
 
@@ -49,8 +50,15 @@ fi
 # =====================================
 
 # mkdir and change to it
-mkcd() {
+mkcd ()
+{
 	mkdir -p "$1" && cd "$1"
+}
+
+# start meld in background
+meld ()
+{
+    command meld "$@" &
 }
 
 # CDABLE VARS

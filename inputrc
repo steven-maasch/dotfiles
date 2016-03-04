@@ -6,7 +6,19 @@ $include /etc/inputrc
 
 # SINGLE TAB
 # =====================================
-#set show-all-if-ambiguous on
+set show-all-if-ambiguous on
+
+# KEEP HIDDEN FILES HIDDEN DURING TAB
+# =====================================
+set match-hidden-files off
+
+# INGORE CASE DURING TAB
+# =====================================
+set completion-ignore-case on
+
+# FILE STATS DURING TAB
+# =====================================
+set visible-stats on
 
 # NO BELL
 # =====================================
