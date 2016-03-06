@@ -1,28 +1,29 @@
-alias mywipe="wipe -dr"
-alias myshred="shred -uvzn 0"
+alias mywipe='wipe -dr'
+alias myshred='shred -uvzn 0'
 
-alias sxc="xclip -selection clipboard"
-alias gxc="xclip -selection clipboard -o"
+alias sxc='xclip -selection clipboard'
+alias gxc='xclip -selection clipboard -o'
 
-alias myip="curl icanhazip.com"
+alias myip='curl icanhazip.com'
 
-COLOR_AUTO="--color=auto"
+COLOR_AUTO='--color=auto'
 alias ls="ls $COLOR_AUTO"
-alias l="ls -F"
-alias ll="ls -lhF"
-alias la="ls -FA"
-alias lla="ls -lhFA"
-alias lt="ls -lhFAtr"
-alias l.="ls -d .*"
+alias l='ls -F'
+alias ll='ls -lhF'
+alias la='ls -FA'
+alias lla='ls -lhFA'
+alias lt='ls -lhFAtr'
+alias l.='ls -d .*'
+alias l1='ls -1'
 
-alias tree="tree -C"
-alias mydf="df -hPT | column -t"
+alias tree='tree -C'
+alias mydf='df -hPT | column -t'
 
 alias grep="grep $COLOR_AUTO"
 alias fgrep="fgrep $COLOR_AUTO"
 alias egrep="egrep $COLOR_AUTO"
 
-APT_GET="sudo apt-get"
+APT_GET='sudo apt-get'
 alias apt-get="$APT_GET"
 alias ag="$APT_GET"
 alias agi="$APT_GET install -y"
@@ -30,19 +31,21 @@ alias upd="$APT_GET update"
 alias upg="$APT_GET upgrade"
 alias updg="$APT_GET update && $APT_GET upgrade"
 
-ZYPPER="sudo zypper"
+ZYPPER='sudo zypper'
 alias zypper="$ZYPPER"
 alias zypi="$ZYPPER in"
 
-alias rm="rm -i"
-alias rd="rm -r"
-alias md="mkdir -p"
-alias sudo="sudo "
-alias _="sudo"
-alias reboot="shutdown -r now"
-alias h="history"
-alias c="clear"
-alias top="htop"
+alias rm='rm -i'
+alias rd='rm -r'
+alias md='mkdir -p'
+alias sudo='sudo '
+alias _='sudo'
+alias reboot='shutdown -r now'
+alias h='history'
+alias c='clear'
+alias top='htop'
+
+alias rebash='. ~/.bashrc'
 
 unset -v COLOR_AUTO
 unset -v APT_GET

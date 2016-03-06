@@ -4,6 +4,8 @@
 
 PROMPT_DIRTRIM=2
 
+CDPATH='.'
+
 # OPTIONS
 # =====================================
 shopt -s checkwinsize
@@ -31,14 +33,14 @@ fi
 COLORED_PROMPT=false
 
 if $COLORED_PROMPT && which tput &> /dev/null && [[ $(tput -T$TERM colors) -ge 8 ]]; then
-	PS1="\[\e[00;33m\][\w]\[\e[0m\]\[\e[00;37m\]\$ \[\e[0m\]"
+	PS1='\[\e[00;33m\][\w]\[\e[0m\]\[\e[00;37m\]\$ \[\e[0m\]'
 else
-	PS1="[\w]\$ "
+	PS1='[\w]\$ '
 fi
 
 unset -v COLORED_PROMPT
 
-PS2="> "
+PS2='> '
 
 # BASH COMPLETION
 # =====================================
@@ -49,16 +51,10 @@ fi
 # CUSTOM FUNCTIONS
 # =====================================
 
-# mkdir and change to it
-mkcd ()
-{
-	mkdir -p "$1" && cd "$1"
-}
-
 # start meld in background
 meld ()
 {
-    command meld "$@" &
+	command meld "$@" &
 }
 
 # CDABLE VARS

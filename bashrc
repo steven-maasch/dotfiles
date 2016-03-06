@@ -5,6 +5,8 @@
 PROMPT_DIRTRIM=2
 PROMPT_COMMAND='history -a'
 
+CDPATH='.'
+
 # OPTIONS
 # =====================================
 shopt -s checkwinsize
@@ -20,7 +22,7 @@ shopt -s cdspell
 HISTSIZE=10000
 HISTFILESIZE=$(($HISTSIZE * 2))
 HISTCONTROL="erasedups:ignoreboth"
-HISTIGNORE="ls*:l:ll:la:lla:l.:cd*:upd:upg:updg:h:c:exit:."
+HISTIGNORE="ls*:l:ll:la:lla:l.:cd*:fg:bg:upd:upg:updg:h:c:exit:."
 
 # ALIASES
 # =====================================
@@ -33,14 +35,14 @@ fi
 COLORED_PROMPT=true
 
 if $COLORED_PROMPT && which tput &> /dev/null && [[ $(tput -T$TERM colors) -ge 8 ]]; then
-	PS1="\[\e[00;33m\][\w]\[\e[0m\]\[\e[00;37m\]\$ \[\e[0m\]"
+	PS1='\[\e[00;33m\][\w]\[\e[0m\]\[\e[00;37m\]\$ \[\e[0m\]'
 else
-	PS1="[\w]\$ "
+	PS1='[\w]\$ '
 fi
 
 unset -v COLORED_PROMPT
 
-PS2="> "
+PS2='> '
 
 # BASH COMPLETION
 # =====================================
@@ -50,11 +52,11 @@ fi
 
 ## BASE16 SHELL
 ## =====================================
-BASE16_THEME="base16-flat.dark.sh"
+BASE16_THEME='base16-flat.dark.sh'
 BASE16_BASE_DIR="${HOME}/.config/base16-shell"
 BASE16_COMPLETE_PATH="${BASE16_BASE_DIR}/${BASE16_THEME}"
 
-if [ -f $BASE16_COMPLETE_PATH ]; then 
+if [ -f $BASE16_COMPLETE_PATH ]; then
 	. $BASE16_COMPLETE_PATH
 fi
 
@@ -62,28 +64,22 @@ unset -v BASE16_{THEME,BASE_DIR,COMPLETE_PATH}
 
 # TMUX
 # =====================================
-TMUX_SESSION=false
+TMUX_AUTO_START=false
 
-if which tmux &> /dev/null && $TMUX_SESSION; then
+if $TMUX_AUTO_START && which tmux &> /dev/null; then
 	# attach session if one exisits or create new one
-	test -z "$TMUX" && (tmux attach || tmux new-session) 
+	test -z "$TMUX" && (tmux attach || tmux new-session)
 fi
 
-unset -v TMUX_SESSION
+unset -v TMUX_AUTO_START
 
 # CUSTOM FUNCTIONS
 # =====================================
 
-# mkdir and change to it
-mkcd ()
-{
-	mkdir -p "$1" && cd "$1"
-}
-
 # start meld in background
 meld ()
 {
-    command meld "$@" &
+	command meld "$@" &
 }
 
 # CDABLE VARS
