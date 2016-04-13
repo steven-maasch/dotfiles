@@ -52,11 +52,13 @@ fi
 
 ## BASE16 SHELL
 ## =====================================
+BASE16_ENABLED=false
+
 BASE16_THEME='base16-flat.dark.sh'
 BASE16_BASE_DIR="${HOME}/.config/base16-shell"
 BASE16_COMPLETE_PATH="${BASE16_BASE_DIR}/${BASE16_THEME}"
 
-if [ -f $BASE16_COMPLETE_PATH ]; then
+if $BASE16_ENABLED && [ -f $BASE16_COMPLETE_PATH ]; then
 	. $BASE16_COMPLETE_PATH
 fi
 
