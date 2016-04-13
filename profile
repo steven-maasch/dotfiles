@@ -24,10 +24,11 @@ fi
 
 # Java
 # =====================================
-JAVA_HOME="/opt/java8-default"
+JAVA_HOME="/opt/java7-default"
 
 if [ -L $JAVA_HOME ]; then
     export JAVA_HOME
+    export PATH="$PATH:$JAVA_HOME/bin"
 else
     unset JAVA_HOME
 fi
@@ -37,3 +38,9 @@ fi
 if [ -d "$HOME/bin" ]; then
 	export PATH="$PATH:$HOME/bin"
 fi
+
+# RVM
+# =====================================
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
