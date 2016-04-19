@@ -1,0 +1,5 @@
+MAVEN_JAVA_HOME="/opt/java8-default"
+
+if [ -L $MAVEN_JAVA_HOME ]; then
+    JAVA_HOME=$MAVEN_JAVA_HOME
+fi

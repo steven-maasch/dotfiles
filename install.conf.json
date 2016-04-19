@@ -11,6 +11,7 @@
         },
         "~/.gitconfig": "gitconfig",
         "~/.inputrc": "inputrc",
+        "~/.mavenrc": "mavenrc",
         "~/.profile": "profile",
         "~/.tmux": {
             "create": true,
