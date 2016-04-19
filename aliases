@@ -44,6 +44,7 @@ alias reboot='shutdown -r now'
 alias h='history'
 alias c='clear'
 alias top='htop'
+alias e="$EDITOR"
 
 alias rebash='. ~/.bashrc'
 
