@@ -3,7 +3,7 @@
 [ -z "$PS1" ] && return
 
 PROMPT_DIRTRIM=2
-PROMPT_COMMAND='history -a'
+#PROMPT_COMMAND='history -a'
 
 CDPATH='.'
 

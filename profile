@@ -37,6 +37,14 @@ if [ -L $JAVA_HOME ]; then
     export PATH="$PATH:$JAVA_HOME/bin"
 fi
 
+# Play
+# =====================================
+PLAY_HOME="/opt/play-default"
+
+if [ -L $PLAY_HOME ]; then
+    export PATH="$PATH:$PLAY_HOME"
+fi
+
 # Path ~/bin
 # =====================================
 if [ -d "$HOME/bin" ]; then
